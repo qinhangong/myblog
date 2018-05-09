@@ -1,0 +1,11 @@
+<%- include('header') %>
+<% if(!posts.length){ %>
+  <p class="no-content">暂无内容</p>
+<% }else{ %>
+  <% posts.forEach(function (post) { %>
+      <%- include('components/post-content', { post: post }) %>
+  <% }) %>
+<% }%>
+<%- include('footer') %>
+
+
